@@ -1,0 +1,19 @@
+.footer__container__wrapper {
+  position: relative;
+}
+.footer__Wrapper {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(37, 113, 212),
+    rgb(81, 200, 247)
+  );
+  margin-top: 27px;
+  position: absolute;
+  top: 91px;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+}

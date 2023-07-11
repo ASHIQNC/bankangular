@@ -1,0 +1,119 @@
+.account-statement__wrapper {
+  display: flex;
+
+  /* changes can be deleted */
+  background-color: white;
+  height: 100vh;
+  margin-top: -13px;
+}
+.account-statement__left-section {
+  width: 50%;
+  /* background-color: red; */
+  /* height: 90vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.account-statement__right-section {
+  width: 50%;
+  /* height: 90vh; */
+}
+
+.button__style {
+  margin-top: 15px;
+  border-radius: 50%;
+  width: 33%;
+  height: 12%;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(37, 113, 212),
+    rgb(81, 200, 247)
+  );
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+/* right section */
+.account-statement__date-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 65px;
+  flex-direction: column;
+}
+.account-statement__button-section {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 25px;
+  /* margin-left: -29px; */
+  margin-right: 54px;
+}
+
+.account-statement__button-section {
+  height: 50px;
+}
+.grouped__button-style {
+  width: 66px;
+  border: 1px solid white;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(37, 113, 212),
+    rgb(81, 200, 247)
+  );
+}
+
+.account-statement__table__wrapper {
+  margin-top: 30px;
+  width: 90%;
+}
+.pdf-button__style {
+  font-size: 18px;
+  height: 40px;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(37, 113, 212),
+    rgb(81, 200, 247)
+  );
+  color: white;
+  border-radius: 8px;
+  border: none;
+}
+.account-statement__pdf-button__style__wrapper {
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 500px) {
+  .account-statement__wrapper {
+    flex-direction: column;
+    margin-top: -18px;
+  }
+
+  .image__Style {
+    width: 90%;
+    height: 374px;
+  }
+
+  .account-statement__left-section {
+    width: 100%;
+    background-color: white;
+    margin-top: 20px;
+  }
+  .account-statement__right-section {
+    width: 100%;
+    background-color: white;
+  }
+  .button__style {
+    height: 50px;
+  }
+  .account-statement__button-section {
+    height: 40px;
+    margin-right: 10px;
+  }
+  .account-statement__table__wrapper {
+    margin-left: 18px;
+    width: 92%;
+  }
+}

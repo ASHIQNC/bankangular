@@ -1,0 +1,9 @@
+.dashboad_wrapper {
+  margin-top: 20px;
+  color: white;
+  z-index: 1;
+}
+
+.dashboard {
+  display: flex;
+}

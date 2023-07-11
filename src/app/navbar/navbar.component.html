@@ -1,0 +1,243 @@
+<div class="container-fluid">
+  <div class="row flex-nowrap">
+    <div class="col-auto col-md-2 min-vh-100 navbar__Wrapper">
+      <div class="p-2 navbar__content__wrapper">
+        <a
+          class="d-flex align-items-center mt-1 mb-2 text-decoration-none text-white justify-content-center"
+        >
+          <span class="fs-5 d-none d-sm-inline">CANARA BANK</span>
+          <i
+            class="fa-solid fa-piggy-bank fa-bounce piggy__icon__wrapper ms-2"
+          ></i>
+        </a>
+
+        <!-- nav -->
+        <ul class="nav nav-pills flex-column mt-4">
+          <!-- view profile -->
+
+          <!-- ms-2 :it is used to give space inbetween content -->
+          <!-- ms means margin from start .it from left side -->
+          <!-- me means margin from end -->
+          <li class="nav-item">
+            <a
+              style="cursor: pointer"
+              class="nav-link text-white"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              <i class="fs-5 fa-solid fa-user"></i>
+
+              <span class="fs-5 d-none d-sm-inline ms-2">View Profile</span>
+            </a>
+          </li>
+
+          <!-- bank enquiry -->
+          <li class="nav-item">
+            <a
+              style="cursor: pointer"
+              class="nav-link text-white mt-3"
+              data-bs-toggle="offcanvas"
+              href="#offcanvasExample"
+              role="button"
+              aria-controls="offcanvasExample"
+            >
+              <i class="fs-5 fa-solid fa-sack-dollar"></i>
+              <span class="fs-5 d-none d-sm-inline ms-2">Balance Enquiry</span>
+            </a>
+          </li>
+
+          <!-- money transfer -->
+          <li class="nav-item">
+            <a
+              style="cursor: pointer"
+              class="nav-link text-white mt-3"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal1"
+            >
+              <i class="fs-5 fa-solid fa-money-bill"></i>
+              <span class="fs-5 d-none d-sm-inline ms-2">Money Transfer</span>
+            </a>
+          </li>
+
+          <!-- account statement -->
+          <li class="nav-item">
+            <a
+              class="nav-link text-white mt-3"
+              style="cursor: pointer"
+              routerLink="/transfer"
+            >
+              <i class="fs-5 fa-solid fa-table-list"></i>
+              <span class="fs-5 d-none d-sm-inline ms-2"
+                >Account Statement</span
+              >
+            </a>
+          </li>
+
+          <!-- logout -->
+          <li class="nav-item">
+            <a
+              href="#"
+              style="cursor: pointer"
+              class="nav-link text-white mt-3"
+            >
+              <i class="fs-5 fa-solid fa-right-from-bracket"></i>
+              <span class="fs-5 d-none d-sm-inline ms-2">Logout</span>
+            </a>
+          </li>
+
+          <!-- Delete account -->
+          <li class="nav-item">
+            <a
+              href="#"
+              style="cursor: pointer"
+              class="nav-link text-white mt-3"
+            >
+              <i class="fs-5 fa-solid fa-user-slash"></i>
+              <span class="fs-5 d-none d-sm-inline ms-2">Delete Account</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" id="t1">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Profile Details</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="text-center">
+          <img class="w-50" src="../../assets/avatar.jpg" alt="user" />
+        </div>
+
+        <div class="mt-5">
+          <h5>user name:Name</h5>
+          <h5>Account number: 123</h5>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- offcanvas -->
+
+<div
+  class="offcanvas offcanvas-start"
+  tabindex="-1"
+  id="offcanvasExample"
+  aria-labelledby="offcanvasExampleLabel"
+>
+  <div class="offcanvas-header">
+    <h2 class="offcanvas-title" id="offcanvasExampleLabel">Balance Enquiry</h2>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      <img src="../../assets/mm.jpg" class="w-100" alt="money" />
+    </div>
+    <div class="mt-3">
+      <h3>h1 "username"</h3>
+      <p class="mt-4">your Current Balance in account number 71265 is</p>
+
+      <h4 class="mt-3" style="color: blue">Balance :1234</h4>
+    </div>
+    <div class="mt-3"></div>
+  </div>
+</div>
+
+<!-- money transfer -->
+
+<div
+  class="modal fade"
+  id="exampleModal1"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" id="t1">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Money Transfer</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <img class="w-100" src="../../assets/transfer.avif" alt="transfer" />
+        </div>
+        <form action="">
+          <div class="mb-4">
+            <input
+              name="recipientaccno"
+              type="text"
+              class="form-control"
+              id="recipientaccountnumber"
+              aria-describedby="accountnumberHelp"
+              placeholder="Recipient Account Number"
+            />
+          </div>
+          <div class="mb-4">
+            <input
+              name="useramount"
+              type="text"
+              class="form-control"
+              id="useramounttransfer"
+              placeholder="Amount to transfer"
+            />
+          </div>
+
+          <div class="mb-4">
+            <input
+              name="userpass"
+              type="password"
+              class="form-control"
+              id="userPassword"
+              placeholder="enter password"
+            />
+          </div>
+          <div>
+            <button type="button" class="btn btn-primary w-100">
+              Transfer
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

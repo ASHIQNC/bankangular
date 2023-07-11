@@ -1,0 +1,8 @@
+.navbar__Wrapper {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(37, 113, 212),
+    rgb(81, 200, 247)
+  );
+  margin-bottom: 20px;
+}

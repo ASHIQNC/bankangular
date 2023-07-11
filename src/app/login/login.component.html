@@ -1,0 +1,47 @@
+<app-header></app-header>
+<h1>{{ data }}</h1>
+
+<div class="login__form__Container">
+  <form id="t1" class="container form__wrapper">
+    <h2 class="text-center mb-5">Login</h2>
+    <div class="mb-3">
+      <input
+        name="accno1"
+        type="text"
+        class="form-control"
+        id="accountnumber1"
+        aria-describedby="accountnumberHelp1"
+        [placeholder]="pdata"
+      />
+      <div id="emailHelp" class="form-text">
+        We'll never share your Account Number with anyone else.
+      </div>
+    </div>
+    <div class="mb-3">
+      <input
+        name="pass1"
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="Enter the password"
+      />
+    </div>
+
+    <button
+      (click)="login()"
+      routerLink="home"
+      type="submit"
+      class="btn btn-primary"
+    >
+      Login
+    </button>
+    <p class="text-center mt-3">
+      Don't have account?
+      <a href="" routerLink="signup" style="text-decoration: none"
+        >Create Account</a
+      >
+    </p>
+  </form>
+</div>
+
+<app-footer></app-footer>

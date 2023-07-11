@@ -1,0 +1,66 @@
+<app-header></app-header>
+
+<div class="account-statement__wrapper">
+  <!-- left section -->
+  <div class="account-statement__left-section">
+    <div class="left-section__image">
+      <img
+        class="image__Style"
+        src="../../assets/credit.png"
+        alt="credit-report"
+      />
+    </div>
+    <button class="button__style" routerLink="/home">
+      Back to <i class="fs-5 fa fa-house" style="color: white"></i>
+    </button>
+  </div>
+
+  <!-- right section -->
+  <div class="account-statement__right-section">
+    <div class="account-statement__date-section">
+      <h4>ACCOUNT STATEMENT</h4>
+      <p>Monday, July 10, 2023</p>
+    </div>
+    <div class="account-statement__button-section">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="grouped__button-style">All</button>
+        <button type="button" class="grouped__button-style">Debit</button>
+        <button type="button" class="grouped__button-style">Credit</button>
+      </div>
+    </div>
+
+    <!-- table section -->
+    <div class="account-statement__table__wrapper">
+      <table class="table">
+        <thead class="table-primary">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Type</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="account-statement__pdf-button__style__wrapper">
+      <button class="pdf-button__style">
+        Export As <i class="ms-2 fa-solid fa-file-pdf"></i>
+      </button>
+    </div>
+  </div>
+</div>

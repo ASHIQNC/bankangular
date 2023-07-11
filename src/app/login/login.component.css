@@ -1,0 +1,19 @@
+.form__wrapper {
+  /* height: 90vh; */
+  height: 68vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(37, 113, 212),
+    rgb(81, 200, 247)
+  );
+  border-radius: 24px;
+}
+
+.login__form__Container {
+  margin-top: 75px;
+  height: 61%;
+}

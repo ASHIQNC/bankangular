@@ -1,0 +1,14 @@
+.navbar__Wrapper {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(37, 113, 212),
+    rgb(81, 200, 247)
+  );
+}
+
+.navbar__content__wrapper {
+  margin-top: 60px;
+}
+.piggy__icon__wrapper {
+  font-size: 40px;
+}
