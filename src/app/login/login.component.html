@@ -5,6 +5,17 @@
   <form id="t1" class="container form__wrapper">
     <h2 class="text-center mb-5">Login</h2>
     <div class="mb-3">
+      <!-- onchange method -->
+      <!-- <input
+        name="accno1"
+        type="text"
+        class="form-control"
+        id="accountnumber1"
+        aria-describedby="accountnumberHelp1"
+        [placeholder]="pdata"
+        (change)="accnoChange($event)"
+      /> -->
+
       <input
         name="accno1"
         type="text"
@@ -12,11 +23,25 @@
         id="accountnumber1"
         aria-describedby="accountnumberHelp1"
         [placeholder]="pdata"
+        #accno
       />
       <div id="emailHelp" class="form-text">
         We'll never share your Account Number with anyone else.
       </div>
     </div>
+    <!-- onchange method -->
+    <!-- <div class="mb-3">
+      <input
+        name="pass1"
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="Enter the password"
+        (change)="passChange($event)"
+      />
+    </div> -->
+
+    <!-- event binidng using template variable -->
     <div class="mb-3">
       <input
         name="pass1"
@@ -24,11 +49,13 @@
         class="form-control"
         id="exampleInputPassword1"
         placeholder="Enter the password"
+        (change)="passChange($event)"
+        #pass
       />
     </div>
 
     <button
-      (click)="login()"
+      (click)="login(accno, pass)"
       routerLink="home"
       type="submit"
       class="btn btn-primary"

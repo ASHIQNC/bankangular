@@ -4,6 +4,7 @@
     rgb(37, 113, 212),
     rgb(81, 200, 247)
   );
+  width: 60%;
 }
 
 .navbar__content__wrapper {
@@ -11,4 +12,10 @@
 }
 .piggy__icon__wrapper {
   font-size: 40px;
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar__Wrapper {
+    width: 22%;
+  }
 }

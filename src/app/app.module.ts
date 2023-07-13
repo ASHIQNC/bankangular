@@ -10,6 +10,7 @@ import { SignupComponent } from './signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AccountstatementComponent } from './accountstatement/accountstatement.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,10 @@ import { AccountstatementComponent } from './accountstatement/accountstatement.c
     SignupComponent,
     DashboardComponent,
     NavbarComponent,
-    AccountstatementComponent
+    AccountstatementComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
