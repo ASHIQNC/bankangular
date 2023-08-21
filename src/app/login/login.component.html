@@ -1,12 +1,12 @@
 <app-header></app-header>
-<h1>{{ data }}</h1>
 
-<div class="login__form__Container">
+<!-- template driven form -->
+<!-- <div class="login__form__Container">
   <form id="t1" class="container form__wrapper">
     <h2 class="text-center mb-5">Login</h2>
-    <div class="mb-3">
-      <!-- onchange method -->
-      <!-- <input
+    <div class="mb-3"> -->
+<!-- onchange method -->
+<!-- <input
         name="accno1"
         type="text"
         class="form-control"
@@ -16,7 +16,7 @@
         (change)="accnoChange($event)"
       /> -->
 
-      <input
+<!-- <input
         name="accno1"
         type="text"
         class="form-control"
@@ -24,13 +24,22 @@
         aria-describedby="accountnumberHelp1"
         [placeholder]="pdata"
         #accno
+      /> -->
+<!-- <input
+        name="accno1"
+        type="text"
+        class="form-control"
+        id="accountnumber1"
+        aria-describedby="accountnumberHelp1"
+        [placeholder]="pdata"
+        [(ngModel)]="accnum"
       />
       <div id="emailHelp" class="form-text">
         We'll never share your Account Number with anyone else.
       </div>
-    </div>
-    <!-- onchange method -->
-    <!-- <div class="mb-3">
+    </div> -->
+<!-- onchange method -->
+<!-- <div class="mb-3">
       <input
         name="pass1"
         type="password"
@@ -41,8 +50,8 @@
       />
     </div> -->
 
-    <!-- event binidng using template variable -->
-    <div class="mb-3">
+<!-- event binidng using template variable -->
+<!-- <div class="mb-3">
       <input
         name="pass1"
         type="password"
@@ -52,14 +61,82 @@
         (change)="passChange($event)"
         #pass
       />
-    </div>
+    </div> -->
 
-    <button
-      (click)="login(accno, pass)"
-      routerLink="home"
-      type="submit"
-      class="btn btn-primary"
+<!-- two way binding -->
+
+<!-- <div class="mb-3">
+      <input
+        name="pass1"
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="Enter the password"
+        (change)="passChange($event)"
+        [(ngModel)]="passwrd"
+      />
+    </div>
+    <button (click)="login()" type="submit" class="btn btn-primary">
+      Login
+    </button>
+    <p class="text-center mt-3">
+      Don't have account?
+      <a href="" routerLink="signup" style="text-decoration: none"
+        >Create Account</a
+      >
+    </p>
+  </form>
+</div> -->
+
+<!-- model driven form -->
+
+<div class="login__form__Container">
+  <form id="t1" class="container form__wrapper" [formGroup]="loginModelForm">
+    <h2 class="text-center mb-5">Login</h2>
+    <div class="mb-3">
+      <!-- onchange method -->
+
+      <input
+        formControlName="acno"
+        name="accno1"
+        type="text"
+        class="form-control"
+        id="accountnumber1"
+        aria-describedby="accountnumberHelp1"
+        [placeholder]="pdata"
+      />
+      <div id="emailHelp" class="form-text">
+        We'll never share your Account Number with anyone else.
+      </div>
+    </div>
+    <div
+      *ngIf="
+        loginModelForm.get('acno')?.errors &&
+        loginModelForm.get('acno')?.touched
+      "
     >
+      <p class="text-danger">accno not valid</p>
+    </div>
+    <!-- two way binding -->
+
+    <div class="mb-3">
+      <input
+        formControlName="psw"
+        name="pass1"
+        type="password"
+        class="form-control"
+        id="psw"
+        placeholder="Enter the password"
+      />
+    </div>
+    <div
+      *ngIf="
+        loginModelForm.get('psw')?.errors && loginModelForm.get('psw')?.touched
+      "
+    >
+      <p class="text-danger">invalid password</p>
+    </div>
+    <button (click)="login()" type="submit" class="btn btn-primary">
       Login
     </button>
     <p class="text-center mt-3">

@@ -1,9 +1,14 @@
 <app-header></app-header>
 <div class="signup__form__container">
-  <form id="t1" class="container signup__form__wrapper">
+  <form
+    [formGroup]="signUpModelForm"
+    id="t1"
+    class="container signup__form__wrapper"
+  >
     <h2 class="text-center mb-5">SignUp</h2>
     <div class="mb-4">
       <input
+        formControlName="acno"
         name="accno"
         type="text"
         class="form-control"
@@ -12,8 +17,19 @@
         placeholder="Enter the  account number"
       />
     </div>
+    <!-- note:here we are conditionally checking using quetion mark whether the "acno" exist or not.if it exist its should validate the form using ts value -->
+    <div
+      *ngIf="
+        signUpModelForm.get('acno')?.errors &&
+        signUpModelForm.get('acno')?.touched
+      "
+    >
+      <p class="text-danger">accept number only</p>
+    </div>
+
     <div class="mb-4">
       <input
+        formControlName="uname"
         name="username"
         type="text"
         class="form-control"
@@ -22,26 +38,50 @@
         placeholder="Enter the user name"
       />
     </div>
+    <div
+      *ngIf="
+        signUpModelForm.get('uname')?.errors &&
+        signUpModelForm.get('uname')?.touched
+      "
+    >
+      <p class="text-danger">accept letters only</p>
+    </div>
     <div class="mb-4">
       <input
+        formControlName="psw"
         name="pass"
         type="password"
         class="form-control"
-        id="exampleInputPassword1"
+        id="psw"
         placeholder="Enter the password"
       />
     </div>
+
+    <div
+      *ngIf="
+        signUpModelForm.get('psw')?.errors &&
+        signUpModelForm.get('psw')?.touched
+      "
+    >
+      <p class="text-danger">accept letters and numbers only</p>
+    </div>
     <div class="mb-4">
       <input
+        formControlName="cpsw"
         name="cpass"
         type="password"
         class="form-control"
-        id="exampleInputPassword2"
+        id="cpsw"
         placeholder="confirm password"
       />
     </div>
+    <div *ngIf="pswMatch">
+      <p class="text-danger">password doesn't match</p>
+    </div>
 
-    <button type="submit" class="btn btn-primary">SignUp</button>
+    <button (click)="signup()" type="submit" class="btn btn-primary">
+      SignUp
+    </button>
   </form>
 </div>
 <app-footer></app-footer>

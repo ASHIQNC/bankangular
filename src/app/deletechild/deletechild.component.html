@@ -1,0 +1,21 @@
+<!-- //childe acno akath data vannindel maathram aa box display aaaka -->
+<div *ngIf="childAcno" class="bg-light container delete__wrapper">
+  <h3 class="heading__style">Are You Sure</h3>
+
+  <h4 class="heading__style">
+    Do You Want To Delete Account
+    <i class="fa-solid fa-calendar-xmark" style="color: #ece518"></i>?
+  </h4>
+  <button
+    (click)="acountDelete()"
+    class="btn btn-outline-danger button__style-section"
+  >
+    Yes
+  </button>
+  <button
+    (click)="noClick()"
+    class="btn btn-outline-success button__style-section"
+  >
+    No
+  </button>
+</div>

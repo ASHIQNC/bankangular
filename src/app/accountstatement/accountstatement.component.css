@@ -64,11 +64,25 @@
     rgb(81, 200, 247)
   );
 }
+.grouped__button-style:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(188, 211, 241),
+    rgb(81, 247, 247)
+  );
+}
 
 .account-statement__table__wrapper {
   margin-top: 30px;
   width: 90%;
+  max-height: 59vh;
 }
+.table__header {
+  position: sticky;
+  top: 0px;
+}
+/* table header */
+
 .pdf-button__style {
   font-size: 18px;
   height: 40px;
@@ -92,8 +106,8 @@
   }
 
   .image__Style {
-    width: 90%;
-    height: 374px;
+    width: 80%;
+    height: 274px;
   }
 
   .account-statement__left-section {

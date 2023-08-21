@@ -1,12 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
-body {
-  background-image: linear-gradient(
+/* body { */
+/* background-image: linear-gradient(
     to top,
     rgb(37, 113, 212),
     rgb(81, 200, 247)
-  );
-  height: 100vh;
-}
+  ); */
+
+/* background-image: linear-gradient(
+    to top,
+    rgb(112 166 237 / 62%),
+    rgb(81, 200, 247)
+  ); */
+/* height: 110vh; */
+/* } */
 
 #t1 {
   transition: all 0.5s ease-in-out;
@@ -14,4 +20,8 @@ body {
 
 #t1:hover {
   transform: scale(1.05);
+}
+
+.hidden {
+  visibility: hidden;
 }

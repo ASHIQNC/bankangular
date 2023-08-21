@@ -17,3 +17,13 @@
   margin-top: 75px;
   height: 61%;
 }
+
+@media only screen and (max-width: 500px) {
+  .form__wrapper {
+    width: 95%;
+    height: 63vh;
+  }
+  .login__form__Container {
+    margin-top: 58px;
+  }
+}

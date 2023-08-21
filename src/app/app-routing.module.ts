@@ -4,10 +4,12 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AccountstatementComponent } from './accountstatement/accountstatement.component';
-
+//import { authGuard } from './auth.guard';
 const routes: Routes = [
   { path: '', component: LoginComponent, pathMatch: 'full' },
   { path: 'signup', component: SignupComponent },
+  // { path: 'home', component: DashboardComponent, canActivate: [authGuard] },
+
   { path: 'home', component: DashboardComponent },
   { path: 'transfer', component: AccountstatementComponent },
 ];

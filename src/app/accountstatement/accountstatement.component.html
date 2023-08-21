@@ -3,6 +3,8 @@
 <div class="account-statement__wrapper">
   <!-- left section -->
   <div class="account-statement__left-section">
+    <!-- egan aanu nammal pipe html file use aakunnath -->
+    <h4>{{ date | date : "medium" }}</h4>
     <div class="left-section__image">
       <img
         class="image__Style"
@@ -23,42 +25,64 @@
     </div>
     <div class="account-statement__button-section">
       <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="grouped__button-style">All</button>
-        <button type="button" class="grouped__button-style">Debit</button>
-        <button type="button" class="grouped__button-style">Credit</button>
+        <button
+          (click)="searchKeyChange('')"
+          type="button"
+          class="grouped__button-style"
+        >
+          All
+        </button>
+        <button
+          (click)="searchKeyChange('DEBIT')"
+          type="button"
+          class="grouped__button-style"
+        >
+          Debit
+        </button>
+        <button
+          (click)="searchKeyChange('CREDIT')"
+          type="button"
+          class="grouped__button-style"
+        >
+          Credit
+        </button>
       </div>
     </div>
 
     <!-- table section -->
-    <div class="account-statement__table__wrapper">
-      <table class="table">
+
+    <div class="account-statement__table__wrapper table-responsive">
+      <table class="table table-bordered">
         <thead class="table-primary">
-          <tr>
+          <tr class="table__header">
             <th scope="col">#</th>
             <th scope="col">Type</th>
             <th scope="col">Amount</th>
+            <th scope="col">Account holder name</th>
             <th scope="col">Date</th>
           </tr>
         </thead>
+        <!-- evide nammal iterate cheyyan vendi ngFor aanu use aaakunnee -->
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
+          <!-- |pipename:'eath tearm vechan search cheyunne':'eath filed name vechaan search cheyunne'  -->
+          <tr
+            *ngFor="
+              let i of transactions | datapipe : searchKey : 'type';
+              let j = index
+            "
+          >
+            <th scope="row">{{ j + 1 }}</th>
+            <td>{{ i.type }}</td>
+            <td>{{ i.amount }}</td>
+            <td>{{ i.user }}</td>
+            <td>{{ i.date }}</td>
           </tr>
         </tbody>
       </table>
     </div>
 
     <div class="account-statement__pdf-button__style__wrapper">
-      <button class="pdf-button__style">
+      <button (click)="convertPdf()" class="pdf-button__style">
         Export As <i class="ms-2 fa-solid fa-file-pdf"></i>
       </button>
     </div>

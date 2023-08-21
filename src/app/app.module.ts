@@ -10,7 +10,11 @@ import { SignupComponent } from './signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AccountstatementComponent } from './accountstatement/accountstatement.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { DatePipe } from '@angular/common';
+import { DeletechildComponent } from './deletechild/deletechild.component';
+import { DatapipePipe } from './dataPipe/datapipe.pipe';
 
 @NgModule({
   declarations: [
@@ -22,9 +26,19 @@ import { FormsModule } from '@angular/forms';
     DashboardComponent,
     NavbarComponent,
     AccountstatementComponent,
+    DeletechildComponent,
+    DatapipePipe,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
+  //formsmodule:ngmodel use chyyan vendi
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
+
+  providers: [DatePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

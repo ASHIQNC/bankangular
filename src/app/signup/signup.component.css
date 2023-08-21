@@ -17,3 +17,13 @@
   margin-top: 75px;
   height: 61%;
 }
+
+@media only screen and (max-width: 500px) {
+  .signup__form__wrapper {
+    width: 95%;
+    height: 63vh;
+  }
+  .signup__form__container {
+    margin-top: 58px;
+  }
+}

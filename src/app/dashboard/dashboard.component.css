@@ -7,3 +7,63 @@
 .dashboard {
   display: flex;
 }
+.dashboard__content {
+  width: 80%;
+  height: 100vh;
+}
+.paragraph__style {
+  margin-top: 45px;
+  font-size: 20px;
+}
+
+.navbar__Wrapper {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(37, 113, 212),
+    rgb(81, 200, 247)
+  );
+  width: 100%;
+}
+
+.navbar__content__wrapper {
+  margin-top: 60px;
+}
+.piggy__icon__wrapper {
+  font-size: 40px;
+}
+.failure {
+  color: red;
+}
+.success {
+  color: green;
+}
+
+/* image style */
+.image__style__section {
+  margin-top: 22px;
+  border-radius: 50%;
+  width: 70%;
+}
+.main__container-section {
+  display: flex;
+}
+.main__container__Wrapper {
+  width: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar__Wrapper {
+    width: 85%;
+  }
+
+  .image__style__section {
+    width: 80%;
+    height: 300px;
+    margin-top: 0px;
+  }
+
+  .paragraph__style {
+    margin-top: 20px;
+    font-size: 10px;
+  }
+}
