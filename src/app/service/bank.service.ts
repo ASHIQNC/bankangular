@@ -57,7 +57,7 @@ export class BankService {
     };
     //nammkk ee data  vere function akath use cheyyandath kond return keyword use aakanam
     return this.http.post(
-      'http://localhost:3000/bankuser/userregister',
+      'https://serverbank-odvv.onrender.com/bankuser/userregister',
       bodyData
     );
   }
@@ -69,14 +69,17 @@ export class BankService {
       acno,
       psw,
     };
-    return this.http.post('http://localhost:3000/bankuser/userlogin', bodyData);
+    return this.http.post(
+      'https://serverbank-odvv.onrender.com/bankuser/userlogin',
+      bodyData
+    );
   }
 
   //get userDetails
   getProfile(acno: any) {
     //nammal url koode "acno" parameter aayit pass aaakunn
     return this.http.get(
-      'http://localhost:3000/bankuser/userprofile/' + acno,
+      'https://serverbank-odvv.onrender.com/bankuser/userprofile/' + acno,
       this.createHeader()
     );
   }
@@ -84,7 +87,7 @@ export class BankService {
 
   getBalanceEnquery(acno: any) {
     return this.http.get(
-      'http://localhost:3000/bankuser/userbalance/' + acno,
+      'https://serverbank-odvv.onrender.com/bankuser/userbalance/' + acno,
       this.createHeader()
     );
   }
@@ -107,7 +110,7 @@ export class BankService {
       date,
     };
     return this.http.post(
-      'http://localhost:3000/bankuser/moneytransfer',
+      'https://serverbank-odvv.onrender.com/bankuser/moneytransfer',
       bodeyData,
       this.createHeader()
     );
@@ -117,7 +120,7 @@ export class BankService {
   //namukk already transaction history data basil und namukk avidunn data edukaan ullaa api create cheytha mathy
   transactionHistory(acno: any) {
     return this.http.get(
-      'http://localhost:3000/bankuser/userhistory/' + acno,
+      'https://serverbank-odvv.onrender.com/bankuser/userhistory/' + acno,
       this.createHeader()
     );
   }
@@ -126,7 +129,7 @@ export class BankService {
 
   acDelete(acno: any) {
     return this.http.delete(
-      'http://localhost:3000/bankuser/userdelete/' + acno,
+      'https://serverbank-odvv.onrender.com/bankuser/userdelete/' + acno,
       this.createHeader()
     );
   }
